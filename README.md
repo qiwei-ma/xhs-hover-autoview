@@ -1,14 +1,14 @@
-# 小红书悬停自动打开翻页关闭脚本（xhs-hover-preview）
+# 🖱️小红书悬停自动打开关闭翻页（xhs-hover-autoview）
 
-🚀 一款适用于 [小红书](https://www.xiaohongshu.com) 网页端的油猴脚本，实现 **悬停自动打开笔记**、**离开自动关闭**，并支持 **鼠标移入图片边缘区域自动翻页**，提升浏览效率。
+🚀 适用于 [小红书网页版](https://www.xiaohongshu.com)的油猴脚本，实现**悬停自动打开笔记**、**离开自动关闭**，并支持**鼠标移入图片边缘区域自动翻页**。
 
 ---
 
 ## ✨ 功能特点
 
-- 🖱️ 鼠标悬停笔记卡片，自动打开
-- 💨 鼠标移出弹窗范围，自动关闭
-- ⏩ 鼠标移动到图片左右边缘，自动翻页
+- ✅  鼠标悬停笔记卡片，自动打开
+- ❌ 鼠标移出弹窗范围，自动关闭
+- 🔄 鼠标移动到图片左右边缘，自动翻页
 - ⚙️ 支持自定义参数
 
 ---
@@ -16,7 +16,7 @@
 ## 🔧 安装方式
 
 1. 安装浏览器插件 [Tampermonkey 油猴扩展](https://www.tampermonkey.net/)
-2. 点击安装脚本 👉 [点此安装](https://raw.githubusercontent.com/qiwei-ma/xhs-hover-preview/main/xhs-hover.user.js)
+2. 点击安装脚本 👉 [点此安装](https://raw.githubusercontent.com/qiwei-ma/xhs-hover-autoview/main/xhs-hover-autoview.user.js)
 3. 打开小红书网页，悬停任意笔记卡片试试！
 
 ---
@@ -34,7 +34,7 @@ xhs-hover-autoview/
 ## 🖼️ 效果预览
 
 > 鼠标悬停预览 + 自动翻页动画演示
-[](demo.gif)
+![](./demo.gif)
 
 ---
 
