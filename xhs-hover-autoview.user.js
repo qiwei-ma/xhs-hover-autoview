@@ -449,9 +449,32 @@
 
     // ===页面上下区域悬停自动上下滚动===
     (function setupVerticalHoverScroll() {
-        const scrollContainer =
-            document.querySelector('.feeds-page') ||
-            document.querySelector('.feeds-tab-container');
+        let scrollContainer = null;
+
+        function updateScrollContainer() {
+            const newContainer =
+                document.querySelector('.feeds-page') ||
+                document.querySelector('.feeds-tab-container');
+
+            if (newContainer !== scrollContainer) {
+                scrollContainer = newContainer;
+                console.log('[悬停滚动] scrollContainer 已更新:', scrollContainer);
+            }
+        }
+
+        // 初始化一次
+        updateScrollContainer();
+
+        // 监听 DOM 变化
+        const observer = new MutationObserver(() => {
+            updateScrollContainer();
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
         const sidebarList = document.querySelector('.side-bar');
         const effectiveScrollElement = document.scrollingElement;
 
