@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         小红书悬停滚动自动打开关闭 & 自动翻页
 // @namespace    http://tampermonkey.net/
-// @version      0.0.2
+// @version      0.0.3
 // @description  上下悬停滚动，悬停笔记自动打开，自动左右翻页，移出自动关闭
 // @author       Qiwei
 // @match        *://www.xiaohongshu.com/*
@@ -30,7 +30,7 @@
         CLICK_INTERVAL_MS: 1000,
         HOVER_SCROLL_RATIO: 0.2,// 上下区域占比（0~1）
         HOVER_SCROLL_SPEED: 60,// 滚动速度（像素/秒）
-        AUTO_PAGE_TURN: false,
+        AUTO_PAGE_TURN: true,
     };
 
     /** 通用注册函数 **/
@@ -449,7 +449,9 @@
 
     // ===页面上下区域悬停自动上下滚动===
     (function setupVerticalHoverScroll() {
-        const scrollContainer = document.querySelector('.feeds-page');
+        const scrollContainer =
+            document.querySelector('.feeds-page') ||
+            document.querySelector('.feeds-tab-container');
         const sidebarList = document.querySelector('.side-bar');
         const effectiveScrollElement = document.scrollingElement;
 
